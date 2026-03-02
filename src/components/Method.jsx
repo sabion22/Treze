@@ -34,17 +34,20 @@ export default function Method() {
                     <p className="method-description">{method.description}</p>
                 </motion.div>
 
-                {/* Steps Timeline */}
+                {/* Steps Timeline Alternated */}
                 <div className="method-steps">
                     {method.steps.map((step, i) => (
                         <motion.div
                             key={i}
-                            className="method-step"
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : {}}
-                            transition={{ duration: 0.6, delay: 0.4 + i * 0.15 }}
+                            className={`method-step ${i % 2 === 0 ? 'step-left' : 'step-right'}`}
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : {}}
+                            transition={{ duration: 0.7, delay: 0.4 + i * 0.2 }}
                         >
-                            <div className="method-step-number">{step.phase}</div>
+                            <div className="method-step-visual">
+                                <div className="method-step-number">{step.phase}</div>
+                                <div className="method-step-line" />
+                            </div>
                             <div className="method-step-content">
                                 <h3 className="method-step-title">{step.title}</h3>
                                 <p className="method-step-desc">{step.description}</p>

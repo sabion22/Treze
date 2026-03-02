@@ -21,6 +21,11 @@ export const THEME = {
         gradientStart: '#2DE2C5',
         gradientEnd: '#1A8FE3',
         divider: 'rgba(255, 255, 255, 0.06)',
+        // Novas Cores de Plataformas
+        amazonBlue: '#0066cc',
+        mercadoLivreYellow: '#fff159',
+        shopeeOrange: '#FF5722',
+        whatsappGreen: '#25D366',
     },
     fonts: {
         primary: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
@@ -45,8 +50,8 @@ export const THEME = {
 
 // ------ IMAGENS E MÍDIA ------
 export const MEDIA = {
-    logo: '/images/logo.png',                    // Logo principal
-    logoLight: '/images/logo-light.png',          // Logo versão clara (se houver)
+    logo: '',                    // Deixe vazio para usar o placeholder de texto no Header
+    logoLight: '',
     favicon: '/images/favicon.ico',
     heroPortrait: '/images/hero-portrait.png',    // Foto do Marcelo (fundo transparente PNG)
     heroVideo: '',                                // Vídeo de fundo do Hero (deixe vazio para não usar)
@@ -70,9 +75,9 @@ export const MEDIA = {
 export const CONTENT = {
     // SEO & Meta
     seo: {
-        title: 'Marcelo Treze — Estrategista de E-commerce FBA',
-        description: 'Mentor e estrategista de e-commerce. Estruturação de operações profissionais para empresas que querem escalar no comércio eletrônico com Amazon FBA, Mercado Livre e Shopee.',
-        keywords: 'e-commerce, FBA, Amazon, Mercado Livre, mentoria, consultoria, marketplace, escalar vendas',
+        title: 'Marcelo Treze — Estrategista de E-commerce',
+        description: 'Estrategista de e-commerce especializado na estruturação e escalabilidade de operações em marketplaces como Amazon e Mercado Livre.',
+        keywords: 'e-commerce, FBA, Amazon, Mercado Livre, mentoria, consultoria, marketplace, escalar vendas, DBA',
     },
 
     // Header / Navegação
@@ -95,7 +100,7 @@ export const CONTENT = {
     hero: {
         topLabel: 'ESTRATEGISTA DE E-COMMERCE',
         mainTitle: 'MARCELO TREZE',
-        subtitle: 'Mentor & Estrategista Full FBA',
+        subtitle: 'Estrategista de E-commerce & Marketplaces',
         description: 'Transformando empresas tradicionais em operações de e-commerce de alta performance nos maiores marketplaces do Brasil.',
         ctaButton: {
             label: 'Iniciar Transformação',
@@ -123,11 +128,14 @@ export const CONTENT = {
         sectionLabel: 'SOBRE',
         headline: 'Quem é Marcelo Treze',
         paragraphs: [
-            'Mentor e estrategista de e-commerce com atuação full FBA, totalmente direcionado à estruturação de operações profissionais para empresas e lojistas que querem entrar ou escalar no comércio eletrônico de forma sólida, previsível e organizada.',
-            'O foco não é iniciante individual tentando vender de forma improvisada. O trabalho é voltado para empresas, lojas físicas, distribuidores e negócios já estruturados que precisam dar o próximo passo no digital.',
+            'Estrategista de e-commerce especializado na estruturação e escalabilidade de operações em marketplaces como Amazon e Mercado Livre, com foco em FBA e modelos logísticos profissionais.',
+            'Ao longo da minha trajetória, ajudei empresas e lojistas a transformarem o digital em uma frente estratégica real de crescimento — saindo da improvisação para operações organizadas, previsíveis e lucrativas.',
+            'Meu trabalho não é sobre vender produtos online. É sobre construir uma operação estruturada, com processos claros, posicionamento competitivo e visão de longo prazo dentro dos marketplaces.',
+            'Atuo diretamente com negócios que já possuem estrutura e desejam profissionalizar o e-commerce para escalar com segurança e consistência.',
+            'Se a sua empresa quer parar de testar o digital e começar a tratá-lo como um braço estratégico de expansão, você está no lugar certo.',
         ],
         // Palavras que serão destacadas com a cor accent dentro dos parágrafos acima
-        highlightWords: ['full FBA', 'operações profissionais', 'escalar'],
+        highlightWords: ['Amazon', 'Mercado Livre', 'FBA', 'operações organizadas', 'estratégico', 'escalar'],
     },
 
     // Seção Expertise (Superpowers)
@@ -136,23 +144,26 @@ export const CONTENT = {
         headline: 'Pilares da Operação',
         items: [
             {
-                title: 'Amazon FBA',
-                description: 'Operação completa com logística FBA como pilar central para performance, autoridade e conversão no maior marketplace do mundo.',
-                tags: ['Logística FBA', 'Buy Box', 'Brand Registry', 'Catálogo Otimizado'],
+                title: 'Logística Amazon',
+                description: 'Implementação de modelos logísticos Amazon (FBA, DBA, CSBA). Analisamos juntos qual a melhor estratégia para o seu modelo de negócio, garantindo máxima performance e Buy Box.',
+                tags: ['FBA', 'DBA', 'CSBA', 'Logística Premium'],
+                platform: 'amazon'
             },
             {
-                title: 'Mercado Livre',
-                description: 'Estruturação profissional de contas, anúncios otimizados, gestão de reputação e escala sustentável no maior marketplace da América Latina.',
-                tags: ['Full', 'Mercado Envios', 'Anúncios Premium', 'Reputação'],
+                title: 'Mercado Livre Full',
+                description: 'Estruturação profissional de contas para o modelo Full e Envios. Foco em anúncios otimizados, gestão de reputação e escala sustentável no maior player da América Latina.',
+                tags: ['Mercado Envios Full', 'Anúncios Premium', 'Reputação Gold'],
+                platform: 'mercadoLivre'
             },
             {
                 title: 'Estratégia Multicanal',
-                description: 'Shopee como canal complementar de expansão e volume, dentro de uma estratégia orientada a marca, operação e crescimento real.',
-                tags: ['Shopee', 'Diversificação', 'Volume', 'Expansão'],
+                description: 'Expansão estratégica para canais complementares como Shopee, orientada a marca, controle de estoque centralizado e crescimento real de volume.',
+                tags: ['Shopee', 'Diversificação', 'Volume de Vendas'],
+                platform: 'shopee'
             },
             {
                 title: 'Gestão & Processos',
-                description: 'Organização de catálogo, precificação estratégica, leitura de métricas, controle operacional e planejamento de envios para centros logísticos.',
+                description: 'Profissionalização total: organização de catálogo, precificação estratégica fundamentada em dados, e controle operacional previsível.',
                 tags: ['Métricas', 'Precificação', 'Estoque', 'Processos'],
             },
         ],
@@ -185,42 +196,42 @@ export const CONTENT = {
         ],
     },
 
-    // Method / Scale Section (Artesanal vs FBA)
+    // Method / Scale Section
     method: {
         sectionLabel: 'MÉTODO',
-        headline: 'De Artesanal Para Escala',
-        description: 'A transformação que leva sua empresa do modelo improvisado para uma operação de e-commerce profissional e escalável.',
+        headline: 'Transformação Para Escala',
+        description: 'A jornada que leva sua empresa de uma operação improvisada para um braço estratégico de expansão digital.',
         steps: [
             {
                 phase: '01',
                 title: 'Diagnóstico',
-                description: 'Análise completa do negócio, mix de produtos, estrutura comercial e potencial de mercado nos marketplaces.',
+                description: 'Análise profunda do negócio, mix de produtos e estrutura operacional para identificar gargalos e oportunidades.',
             },
             {
                 phase: '02',
                 title: 'Estruturação',
-                description: 'Organização de catálogo, padronização de anúncios, estratégia de precificação e gestão de estoque.',
+                description: 'Padronização de anúncios, precificação estratégica e organização de processos internos.',
             },
             {
                 phase: '03',
-                title: 'Implantação FBA',
-                description: 'Configuração logística, planejamento de envios para centros de distribuição e ativação da operação FBA.',
+                title: 'Logística Avançada',
+                description: 'Implementação de modelos profissionais (FBA, Full, DBA) para garantir competitividade e agilidade.',
             },
             {
                 phase: '04',
-                title: 'Escala',
-                description: 'Expansão de catálogo, otimização contínua, treinamento de equipe e crescimento previsível de faturamento.',
+                title: 'Escala & Performance',
+                description: 'Crescimento previsível através de otimização contínua, leitura de métricas e expansão de catálogo.',
             },
         ],
         // Comparativo visual
         comparison: {
             before: {
-                title: 'Modelo Artesanal',
+                title: 'Operação Improvisada',
                 points: ['Logística manual', 'Estoque parado', 'Vendas imprevisíveis', 'Sem processos', 'Margem apertada'],
             },
             after: {
-                title: 'Operação FBA',
-                points: ['Logística automatizada', 'Giro de estoque otimizado', 'Vendas previsíveis', 'Processos claros', 'Margem saudável'],
+                title: 'Braço Estratégico',
+                points: ['Logística profissional', 'Giro de estoque ágil', 'Vendas previsíveis', 'Processos claros', 'Escalabilidade real'],
             },
         },
     },
@@ -228,8 +239,8 @@ export const CONTENT = {
     // CTA / Contact Section
     contact: {
         sectionLabel: 'CONTATO',
-        headline: "VAMOS ESCALAR\nSEU NEGÓCIO",
-        description: 'Pronto para transformar sua empresa em uma operação de e-commerce profissional? Entre em contato e descubra como.',
+        headline: "VAMOS ESTRUTURAR\nSEU CRESCIMENTO",
+        description: 'Pronto para profissionalizar sua operação e escalar com segurança? Entre em contato agora.',
         ctaButton: {
             label: 'Aplicar Para Consultoria',
             href: 'https://wa.me/5511999999999', // Link do WhatsApp
@@ -241,7 +252,7 @@ export const CONTENT = {
     // Footer
     footer: {
         brand: 'MARCELO TREZE',
-        tagline: 'Estrategista de E-commerce FBA',
+        tagline: 'Estrategista de E-commerce & Marketplaces',
         copyright: `© ${new Date().getFullYear()} Marcelo Treze. Todos os direitos reservados.`,
         social: [
             { platform: 'Instagram', url: 'https://instagram.com/marcelotreze', icon: 'instagram' },

@@ -289,22 +289,25 @@
         /* Reativo ao content.js */
     }
 
-    .hero-content-overlay {
-        bottom: 4rem;
-        padding: 0 1.5rem;
-        z-index: 40;
-    }
-
-    .hero-marquee-track {
-        /* Agora respeita a velocidade do content.js também no mobile */
-        animation-duration: var(--marquee-speed, 80s);
+    .hero-text-bg {
+        z-index: 10;
+        align-items: flex-start;
+        padding-top: 15vh;
+        /* Move o texto pra cima no mobile */
     }
 
     .hero-marquee-text {
-        /* Diminui proporcionalmente ao tamanho definido no content.js */
-        font-size: calc(var(--marquee-size, 8rem) * 0.45);
-        padding: 0 2rem;
+        font-size: calc(var(--marquee-size, 8rem) * 0.75);
+        /* Aumentado de 0.45 para 0.75 */
+        padding: 0 4rem;
         letter-spacing: var(--marquee-spacing, -0.04em);
+        opacity: 0.9;
+    }
+
+    .hero-content-overlay {
+        bottom: 6rem;
+        padding: 0 1.5rem;
+        z-index: 40;
     }
 
     .hero-subtitle {

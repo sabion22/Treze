@@ -28,11 +28,12 @@ export default function Expertise() {
                     {expertise.items.map((item, i) => (
                         <motion.div
                             key={i}
-                            className="expertise-card"
+                            className={`expertise-card ${item.platform || ''}`}
                             initial={{ opacity: 0, y: 40 }}
                             animate={isInView ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.6, delay: 0.3 + i * 0.15 }}
                         >
+                            <div className="expertise-card-glow" />
                             <h3 className="expertise-card-title">{item.title}</h3>
                             <p className="expertise-card-desc">{item.description}</p>
                             <div className="expertise-tags">

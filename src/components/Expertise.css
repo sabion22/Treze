@@ -3,7 +3,8 @@
    ============================================================ */
 
 .expertise {
-    padding: clamp(6rem, 12vh, 10rem) 0;
+    padding: clamp(2rem, 5vh, 4rem) 0 clamp(4rem, 8vh, 6rem);
+    /* Reduzido padding pra evitar buracos */
 }
 
 .expertise-grid {
@@ -14,13 +15,14 @@
 }
 
 .expertise-card {
-    background: var(--card-bg);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
     border: 1px solid var(--card-border);
     border-radius: var(--radius-lg);
     padding: clamp(2rem, 3vw, 2.5rem);
     transition: all var(--transition-default);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 .expertise-card::before {
@@ -36,9 +38,9 @@
 }
 
 .expertise-card:hover {
-    border-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .expertise-card:hover::before {
@@ -83,8 +85,103 @@
     color: var(--accent);
 }
 
+/* Amazon Theme */
+.expertise-card.amazon:hover {
+    border-color: #0066cc;
+    box-shadow: 0 20px 60px rgba(0, 102, 204, 0.15);
+}
+
+.expertise-card.amazon .expertise-card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(0, 102, 204, 0.1), transparent 60%);
+    pointer-events: none;
+}
+
+.expertise-card.amazon:hover .expertise-card-title {
+    color: #0066cc;
+}
+
+.expertise-card.amazon:hover .expertise-tag {
+    border-color: #0066cc;
+    color: #0066cc;
+}
+
+/* Mercado Livre Theme */
+.expertise-card.mercadoLivre:hover {
+    border-color: #fff159;
+    box-shadow: 0 20px 60px rgba(255, 241, 89, 0.1);
+}
+
+.expertise-card.mercadoLivre .expertise-card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(255, 241, 89, 0.05), transparent 60%);
+    pointer-events: none;
+}
+
+.expertise-card.mercadoLivre:hover .expertise-card-title {
+    color: #fff159;
+}
+
+.expertise-card.mercadoLivre:hover .expertise-tag {
+    border-color: #fff159;
+    color: #fff159;
+}
+
 @media (max-width: 768px) {
     .expertise-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .expertise-card {
+        padding: 1.5rem;
+    }
+
+    /* Cores sempre ativas no mobile */
+    .expertise-card.amazon {
+        border-color: rgba(0, 102, 204, 0.3);
+    }
+
+    .expertise-card.amazon .expertise-card-title {
+        color: #0066cc;
+    }
+
+    .expertise-card.amazon .expertise-tag {
+        border-color: rgba(0, 102, 204, 0.5);
+        color: #0066cc;
+    }
+
+    .expertise-card.mercadoLivre {
+        border-color: rgba(255, 241, 89, 0.3);
+    }
+
+    .expertise-card.mercadoLivre .expertise-card-title {
+        color: #fff159;
+    }
+
+    .expertise-card.mercadoLivre .expertise-tag {
+        border-color: rgba(255, 241, 89, 0.5);
+        color: #fff159;
+    }
+
+    .expertise-card.shopee {
+        border-color: rgba(255, 87, 34, 0.3);
+    }
+
+    .expertise-card.shopee .expertise-card-title {
+        color: #FF5722;
+    }
+
+    .expertise-card.shopee .expertise-tag {
+        border-color: rgba(255, 87, 34, 0.5);
+        color: #FF5722;
     }
 }
