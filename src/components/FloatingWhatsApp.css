@@ -1,0 +1,48 @@
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    text-decoration: none;
+    animation: pulsate 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+.floating-whatsapp svg {
+    width: 30px;
+    height: 30px;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Hide on Desktop */
+@media (min-width: 769px) {
+    .floating-whatsapp {
+        display: none;
+    }
+}

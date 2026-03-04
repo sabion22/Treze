@@ -36,6 +36,7 @@ export default function Method() {
 
                 {/* Steps Timeline Alternated */}
                 <div className="method-steps">
+                    <div className="method-main-line" />
                     {method.steps.map((step, i) => (
                         <motion.div
                             key={i}
@@ -46,7 +47,6 @@ export default function Method() {
                         >
                             <div className="method-step-visual">
                                 <div className="method-step-number">{step.phase}</div>
-                                <div className="method-step-line" />
                             </div>
                             <div className="method-step-content">
                                 <h3 className="method-step-title">{step.title}</h3>

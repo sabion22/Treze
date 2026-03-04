@@ -109,3 +109,120 @@
 .contact-info-item:hover {
     color: var(--accent);
 }
+
+/* ============================================================
+   SMART FORM STYLES
+   ============================================================ */
+
+.contact-smart-form {
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    padding: clamp(2rem, 4vw, 3rem);
+    text-align: left;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.pills-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.pill {
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--divider);
+    border-radius: 9999px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.pill:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+}
+
+.pill.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.form-input {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--divider);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+    outline: none;
+    font-family: inherit;
+}
+
+.form-input:focus {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.form-submit {
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-top: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-submit.whatsapp-style {
+    background: #25D366;
+    color: white;
+}
+
+.form-submit.blocked {
+    opacity: 0.3;
+    pointer-events: none;
+    grayscale: 1;
+    /* Filter fallback */
+    filter: grayscale(1);
+    background: #333;
+}
+
+.form-submit:hover:not(.blocked) {
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.3);
+    transform: translateY(-2px);
+}
