@@ -15,10 +15,10 @@ export const THEME = {
         textPrimary: '#FFFFFF',
         textSecondary: '#A1A1A1',
         textMuted: '#666666',
-        accent: '#2DE2C5',          // Cor de destaque principal (teal)
+        accent: '#FC0000',          // Cor de destaque principal (teal)
         accentHover: '#25C4AB',
         accentGlow: 'rgba(45, 226, 197, 0.15)',
-        gradientStart: '#2DE2C5',
+        gradientStart: '#FC0000',
         gradientEnd: '#1A8FE3',
         divider: 'rgba(255, 255, 255, 0.06)',
         // Novas Cores de Plataformas
@@ -52,7 +52,7 @@ export const THEME = {
 export const MEDIA = {
     logo: '',                    // Deixe vazio para usar o placeholder de texto no Header
     logoLight: '',
-    favicon: '/images/favicon.ico',
+    favicon: '/images/favicon.png',
     heroPortrait: '/images/hero-portrait.png',    // Foto do Marcelo (fundo transparente PNG)
     heroVideo: '',                                // Vídeo de fundo do Hero (deixe vazio para não usar)
     aboutImage: '/images/about.jpg',              // Imagem da seção Sobre
@@ -75,9 +75,9 @@ export const MEDIA = {
 export const CONTENT = {
     // SEO & Meta
     seo: {
-        title: 'Marcelo Treze — Estrategista de E-commerce',
-        description: 'Estrategista de e-commerce especializado na estruturação e escalabilidade de operações em marketplaces como Amazon e Mercado Livre.',
-        keywords: 'e-commerce, FBA, Amazon, Mercado Livre, mentoria, consultoria, marketplace, escalar vendas, DBA',
+        title: 'Marcelo Treze — Estrategista de E-commerce Piracicaba',
+        description: 'Estrategista de e-commerce e especialista em FBA na região de Piracicaba e interior de SP. Estruturação e escalabilidade de operações em Marketplaces.',
+        keywords: 'e-commerce Piracicaba, FBA Piracicaba, Amazon interior SP, Mercado Livre, consultoria marketplace Piracicaba, escalar vendas, DBA',
     },
 
     // Header / Navegação
@@ -129,7 +129,7 @@ export const CONTENT = {
         headline: 'Quem é Marcelo Treze',
         paragraphs: [
             'Estrategista de e-commerce especializado na estruturação e escalabilidade de operações em marketplaces como Amazon e Mercado Livre, com foco em FBA e modelos logísticos profissionais.',
-            'Ao longo da minha trajetória, ajudei empresas e lojistas a transformarem o digital em uma frente estratégica real de crescimento — saindo da improvisação para operações organizadas, previsíveis e lucrativas.',
+            'Ao longo da minha trajetória, ajudei empresas e lojistas a transformarem o digital em uma frente estratégica real de crescimento e a saírem da improvisação rumo a operações organizadas, previsíveis e lucrativas.',
             'Meu trabalho não é sobre vender produtos online. É sobre construir uma operação estruturada, com processos claros, posicionamento competitivo e visão de longo prazo dentro dos marketplaces.',
             'Atuo diretamente com negócios que já possuem estrutura e desejam profissionalizar o e-commerce para escalar com segurança e consistência.',
             'Se a sua empresa quer parar de testar o digital e começar a tratá-lo como um braço estratégico de expansão, você está no lugar certo.',
@@ -174,23 +174,23 @@ export const CONTENT = {
         sectionLabel: 'RESULTADOS',
         headline: 'Números Que Falam',
         stats: [
-            { value: '500+', label: 'Empresas Assessoradas', suffix: '' },
-            { value: '10M+', label: 'Em Vendas Geradas', suffix: 'R$' },
+            { value: '112+', label: 'Empresas Assessoradas', suffix: '' },
+            { value: '8M+', label: 'Em Vendas Geradas', suffix: 'R$' },
             { value: '3', label: 'Plataformas Dominadas', suffix: '' },
-            { value: '98%', label: 'De Satisfação', suffix: '' },
+            { value: '40%', label: 'Média de Crescimento', suffix: '' },
         ],
         // Cards de depoimentos/cases
         testimonials: [
             {
                 quote: 'O Marcelo transformou nossa operação. Saímos de zero no digital para faturar 6 dígitos mensais na Amazon em menos de 6 meses.',
-                author: 'Nome do Cliente',
-                role: 'CEO, Empresa X',
+                author: 'Encicãopédia',
+                role: 'CEO, Lucas Piva',
                 image: '/images/testimonial-1.jpg',
             },
             {
                 quote: 'A consultoria mudou completamente o rumo da nossa empresa no e-commerce. Processos claros, resultados previsíveis.',
-                author: 'Nome do Cliente',
-                role: 'Diretor Comercial, Empresa Y',
+                author: 'Harmonia Store',
+                role: 'Gestor de Operações, Robson Fonseca',
                 image: '/images/testimonial-2.jpg',
             },
         ],
@@ -241,12 +241,23 @@ export const CONTENT = {
         sectionLabel: 'CONTATO',
         headline: "VAMOS ESTRUTURAR\nSEU CRESCIMENTO",
         description: 'Pronto para profissionalizar sua operação e escalar com segurança? Entre em contato agora.',
+        form: {
+            faturamentoLabel: 'Qual seu faturamento mensal atual?',
+            faturamentoOptions: ['Até 10k', '10k - 50k', '50k+'],
+            ondeVendeLabel: 'Você vende em:',
+            ondeVendeOptions: ['Loja Física', 'Marketplace', 'Ambos'],
+            gargaloLabel: 'Qual sua principal dificuldade hoje?',
+            gargaloPlaceholder: 'Ex: Logística, tráfego, gestão...',
+            submitButton: 'Finalizar no WhatsApp',
+            validationErrorMessage: 'Por favor, preencha todos os campos antes de continuar.',
+            whatsappTemplate: 'Olá, quero aplicar para a consultoria.\n\nMeu faturamento atual é: {faturamento}\nEu vendo em: {ondeVende}\nMinha principal dificuldade é: {gargalo}',
+        },
         ctaButton: {
             label: 'Aplicar Para Consultoria',
-            href: 'https://wa.me/5511999999999', // Link do WhatsApp
+            href: 'https://wa.me/5519971359913', // Link do WhatsApp
         },
-        email: 'contato@marcelotreze.com.br',
-        phone: '+55 11 99999-9999',
+        email: 'treze@marcelotreze.com',
+        phone: '+55 19 97135-9913',
     },
 
     // Footer
@@ -255,14 +266,11 @@ export const CONTENT = {
         tagline: 'Estrategista de E-commerce & Marketplaces',
         copyright: `© ${new Date().getFullYear()} Marcelo Treze. Todos os direitos reservados.`,
         social: [
-            { platform: 'Instagram', url: 'https://instagram.com/marcelotreze', icon: 'instagram' },
-            { platform: 'YouTube', url: 'https://youtube.com/@marcelotreze', icon: 'youtube' },
-            { platform: 'LinkedIn', url: 'https://linkedin.com/in/marcelotreze', icon: 'linkedin' },
-            { platform: 'TikTok', url: 'https://tiktok.com/@marcelotreze', icon: 'tiktok' },
+            { platform: 'Instagram', url: 'https://www.instagram.com/eutreze_', icon: 'instagram' },
+            { platform: 'YouTube', url: 'https://www.youtube.com/@MtrezeAmazon', icon: 'youtube' },
+
         ],
         links: [
-            { label: 'Política de Privacidade', href: '/privacidade' },
-            { label: 'Termos de Uso', href: '/termos' },
         ],
     },
 };

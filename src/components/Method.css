@@ -110,14 +110,12 @@
 
 .method-step-content {
     align-self: center;
-    padding: clamp(2rem, 3vw, 3rem);
-    /* Increased padding */
+    padding: clamp(2.5rem, 4vw, 4rem); /* Increased padding for more premium look */
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: var(--radius-lg);
     transition: all var(--transition-default);
     flex: 1;
-    /* Ensure it takes available space */
 }
 
 .method-step:hover .method-step-content {
@@ -177,16 +175,17 @@
 }
 
 .method-step-title {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    font-weight: 600;
+    font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+    font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem; /* Better breathing room */
+    letter-spacing: -0.01em;
 }
 
 .method-step-desc {
-    font-size: 0.9rem;
+    font-size: 0.95rem; /* Slightly larger text */
     font-weight: 300;
-    line-height: 1.7;
+    line-height: 1.8; /* More relaxed line height */
     color: var(--text-secondary);
 }
 
